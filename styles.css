@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,45 +6,18 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Encabezado */
 header {
-    background-color: #ce3abf;
+    background-color: #ff6699;
     color: white;
     padding: 20px;
     text-align: center;
 }
 
-#galeria {
-    padding: 20px;
-    background-color: white;
-}
-
-#galeria .imagenes {
-    display: flex;
-    gap: 10px;
-}
-
-#galeria img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-#contacto {
-    background-color: #d99ddb;
-    padding: 20px;
-    text-align: center;
-}
-
-footer {
-    background-color: #c66ec5;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
-}
-
+/* Galería */
 .carousel-container {
-    width: 100%;
+    width: 90%;
+    margin: auto;
     overflow: hidden;
     position: relative;
     padding: 20px;
@@ -57,18 +31,86 @@ footer {
 }
 
 .carousel img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
-.carousel-container:hover .carousel {
-    animation: scroll 5s linear infinite;
+/* Contacto */
+#contacto {
+    background-color: #ffcccc;
+    padding: 20px;
+    text-align: center;
 }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+#contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contacto a {
+    text-decoration: none;
+    color: #ff3366;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+    background-color: #ff6699;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+    /* Ajustes en la galería */
+    .carousel img {
+        max-width: 150px;
+    }
+
+    /* Tamaño del texto */
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #contacto a {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Reducir tamaño de imágenes en móviles */
+    .carousel img {
+        max-width: 120px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #contacto {
+        padding: 15px;
+    }
+
+    #contacto a {
+        font-size: 14px;
+    }
 }
