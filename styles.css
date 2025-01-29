@@ -7,24 +7,30 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f3e8ff; /* Fondo suave en tono lila */
+    background-color: #f3e8ff;
     color: #333;
+    background-image: url('Imagenes/Fondo.png'); /* Ruta relativa para la imagen de fondo */
+    background-size: cover;
+    background-position: center;
 }
 
 /* Encabezado */
 header {
-    background: linear-gradient(135deg, #6a0dad, #9b30ff); /* Degradado violeta */
+    background: linear-gradient(135deg, rgba(106, 13, 173, 0.7), rgba(155, 48, 255, 0.7)), url('ruta/a/imagen/fondo-header.jpg'); /* Fondo con imagen de manicura */
     color: white;
     text-align: center;
     padding: 20px;
     font-weight: 600;
     letter-spacing: 1px;
+    background-size: cover;
+    background-position: center;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;  /* Fuente Playfair Display */
-    font-size: 48px;  /* Tamaño más grande */
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
     margin: 0;
+    color: #ffed00; /* Color amarillo suave, que resalta sobre el fondo */
 }
 
 header p {
@@ -36,6 +42,9 @@ header p {
 .gallery-section {
     text-align: center;
     padding: 30px;
+    background-image: url('ruta/a/imagen/fondo-galeria.jpg'); /* Fondo con imagen temática */
+    background-size: cover;
+    background-position: center;
 }
 
 .gallery-section h2 {
@@ -44,45 +53,18 @@ header p {
     color: #6a0dad;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-.carousel-container {
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.carousel img:hover {
-    transform: scale(1.1);
+    background-image: url('ruta/a/imagen/girasol.svg'); /* Imagen de girasol */
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding-right: 40px; /* Espacio para que se vea el girasol */
 }
 
 /* Sección Sobre Mí */
 .about {
-    background-color: #d8b4ff; /* Fondo lila pastel */
+    background-color: #d8b4ff;
     padding: 30px;
     text-align: center;
+    position: relative;
 }
 
 .about h2 {
@@ -100,12 +82,24 @@ header p {
     line-height: 1.6;
 }
 
+/* Agregar un pequeño girasol en la esquina inferior */
+.about::after {
+    content: url('ruta/a/imagen/girasol.svg'); /* Girasol en la esquina inferior */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
 /* Sección Contacto */
 .contact {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #9b30ff, #6a0dad);
+    background: linear-gradient(135deg, rgba(155, 48, 255, 0.7), rgba(106, 13, 173, 0.7)), url('ruta/a/imagen/fondo-contacto.jpg'); /* Fondo con imagen temática */
     color: white;
+    background-size: cover;
+    background-position: center;
 }
 
 .contact h2 {
