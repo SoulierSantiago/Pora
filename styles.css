@@ -9,7 +9,7 @@ body {
     padding: 0;
     background-color: #f3e8ff;
     color: #333;
-    background-image: url('Imagenes/Fondo.png'); /* Ruta relativa para la imagen de fondo */
+    background-image: url('https://github.com/SoulierSantiago/Pora/blob/4e24236f35a1bf925b86e306a876757d7837ceb8/Fondo.png'); /* Ruta relativa para la imagen de fondo */
     background-size: cover;
     background-position: center;
 }
